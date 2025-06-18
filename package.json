@@ -1,0 +1,30 @@
+{
+  "name": "sales-management-system",
+  "version": "1.0.0",
+  "description": "نظام إدارة المبيعات والمشتريات والمخزون باللغة العربية",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "serve": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "sales",
+    "inventory",
+    "management",
+    "arabic",
+    "firebase"
+  ],
+  "author": "Manus AI",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/sales-management-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/sales-management-system/issues"
+  },
+  "homepage": "https://github.com/your-username/sales-management-system#readme"
+}
+

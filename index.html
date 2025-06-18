@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام إدارة المبيعات والمشتريات</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-store"></i>
+                    <h1>نظام إدارة المبيعات</h1>
+                </div>
+                <div class="user-info">
+                    <span id="username">مرحباً، المستخدم</span>
+                    <button id="logout-btn" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        تسجيل الخروج
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="sidebar">
+            <ul class="nav-menu">
+                <li class="nav-item active">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>لوحة التحكم</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/products.html" class="nav-link">
+                        <i class="fas fa-box"></i>
+                        <span>الأصناف</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/sales.html" class="nav-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>فواتير المبيعات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/purchases.html" class="nav-link">
+                        <i class="fas fa-truck"></i>
+                        <span>فواتير المشتريات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/stock.html" class="nav-link">
+                        <i class="fas fa-warehouse"></i>
+                        <span>المخزون</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/reports.html" class="nav-link">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>التقارير</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="dashboard">
+                <h2 class="page-title">لوحة التحكم</h2>
+                
+                <!-- Statistics Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="total-sales">0</h3>
+                            <p>إجمالي المبيعات اليوم</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="total-purchases">0</h3>
+                            <p>إجمالي المشتريات اليوم</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="total-products">0</h3>
+                            <p>عدد الأصناف</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="low-stock-items">0</h3>
+                            <p>أصناف قاربت على النفاد</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activities -->
+                <div class="recent-activities">
+                    <h3>الأنشطة الأخيرة</h3>
+                    <div class="activity-list" id="activity-list">
+                        <!-- Activities will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Low Stock Alerts -->
+                <div class="alerts-section">
+                    <h3>تنبيهات المخزون</h3>
+                    <div class="alerts-list" id="alerts-list">
+                        <!-- Alerts will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="config/firebase-config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/print-helper.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
+
