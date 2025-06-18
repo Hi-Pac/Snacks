@@ -1,12 +1,13 @@
 // Firebase Configuration
 // يجب استبدال هذه القيم بقيم مشروعك الفعلي من Firebase Console
 const firebaseConfig = {
-    apiKey: "your-api-key-here",
-    authDomain: "your-project-id.firebaseapp.com",
-    projectId: "your-project-id",
-    storageBucket: "your-project-id.appspot.com",
-    messagingSenderId: "your-sender-id",
-    appId: "your-app-id"
+  apiKey: "AIzaSyCAUaKXd9bzMUfBAQTa1nSaEbR_VVLIe98",
+  authDomain: "colorflow-erp.firebaseapp.com",
+  projectId: "colorflow-erp",
+  storageBucket: "colorflow-erp.firebasestorage.app",
+  messagingSenderId: "40753390221",
+  appId: "1:40753390221:web:a032845d5891d2b510b8c4",
+  measurementId: "G-RBL9VL7RC0"
 };
 
 // Initialize Firebase
